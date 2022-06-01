@@ -2,9 +2,16 @@
   <v-container>
     <v-row>
       <v-col col="12">
-        <h1 class="text-center py-10">人員清單</h1>
-        <h2 class="text-center py-10">安安你好啊</h2>
-        <h3 class="text-center py-10">安安你好啊</h3>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <p>
+          <span>span</span>
+        </p>
+        <small>small</small>
       </v-col>
     </v-row>
   </v-container>
