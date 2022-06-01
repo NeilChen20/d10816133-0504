@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>
+    <div class="gray">9999</div>
+    
+  </div>
 </template>
 
 <script>
