@@ -11,16 +11,16 @@
       class="d-flex flex-column px-5 py-3 rounded-lg"> <!--rounded-lg調整v-card圓角-->
         <div class="d-flex align-center flex-grow-0"> <!--name&sex--> <!--flex-grow比例分配--> <!--align-center水平對齊-置中-->
           <h3 class="primary--text">
-            <strong>王小明</strong>
+            <strong>{{user.name}}</strong>
           </h3>
-          <h4 class="gray--text ml-auto">男</h4>
+          <h4 class="gray--text ml-auto">{{user.gender}}</h4>
         </div>
         <div class="flex-grow-0"> <!--num-->
-          <span class="gray--text">2021062011493428</span>
+          <span class="gray--text">{{user.UID}}</span>
         </div>
         <div class="d-flex align-end flex-grow-1"> <!--mail--> <!--align-end水平置中-下-->
           <v-icon left color="secondary">mdi-gmail</v-icon>
-          <span class="secondary--text">Takmig001@takming.edu.tw</span>
+          <span class="secondary--text">{{user.email}}</span>
         </div>
       </v-card>
     </v-col>
@@ -28,10 +28,25 @@
 
 </v-container>
 </template>
-<script> /*coding JS，可使用vue api()，是指vue提供的func()，data()其中之一*/
+<script> /*coding JS，可使用vue api()，是指vue提供的func()，data()是其一*/
 export default {
 data() {
-return {};
+return {
+  user: {
+    UID: "2021062011493428",
+    SID: "ROOT",
+    CID: "",
+    name: "王小小",
+    phone: "0980700344",
+    gender: "Male",
+    email: "Takming001@takming.edu.tw",
+    zip: 100,
+    address: "臺北市內湖區環山路一段56號",
+    createTime: "2022-06-02 23:35:37",
+    updateTime: "2022-06-02 23:35:37",
+    isDelete: null
+  }
+};
 }
 };
 </script>
