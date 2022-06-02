@@ -25,6 +25,11 @@
       </v-card>
     </v-col>
   </v-row>
+  <v-row class="mt-8"> <!--換頁選單--> <!--mt-x頁數與上列資料的距離-->
+    <v-col cols="12">
+      <v-pagination :value="1" :length="6"/>
+    </v-col>
+  </v-row>
 
 </v-container>
 </template>
