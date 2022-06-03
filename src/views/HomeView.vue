@@ -34,23 +34,11 @@
   </v-container>
 </template>
 <script> /*coding JS，可使用vue api()，是指vue提供的func()，data()是其一*/
+import admin from "../assets/admin.json";
 export default {
 data() {
 return {
-  user: {
-    UID: "2021062011493428",
-    SID: "ROOT",
-    CID: "",
-    name: "王小小",
-    phone: "0980700344",
-    gender: "Male",
-    email: "Takming001@takming.edu.tw",
-    zip: 100,
-    address: "臺北市內湖區環山路一段56號",
-    createTime: "2022-06-02 23:35:37",
-    updateTime: "2022-06-02 23:35:37",
-    isDelete: null
-  }
+  
 };
 }
 };
