@@ -13,7 +13,7 @@
             <h3 class="primary--text">
               <strong>{{user.name}}</strong>
             </h3>
-            <h4 class="gray--text ml-auto">{{user.gender}}</h4>
+            <h4 class="gray--text ml-auto">{{handleGender(user.gender)}}</h4> <!--將handleGender方法寫入h4-->
           </div>
           <div class="flex-grow-0"> <!--num-->
             <span class="gray--text">{{user.UID}}</span>
@@ -38,16 +38,21 @@ import admin from "../assets/admin.json";
 export default {
   data() {
     return {
-      users: [],
-      page:1,
+      users: [],  /*使用者們資訊*/
+      page:1,  /*目前頁數(預設第1頁)*/
     };
   },
   created() {  /*進入畫面前獲取資料*/
     this.getUsers();
   },
   methods: {  /*執行獲取資料並將資料放入*/
-    getUsers() {
+    getUsers() {  /*從admin.json放入資料*/
       this.users = admin.data.user;
+    },
+    handleGender(type) {  /*性別判斷*/
+      if (type === "M") return "男";
+      if (type === "W") return "女";
+      return "其他";
     }
   },
   computed: { /*換頁改變資料呈現*/
